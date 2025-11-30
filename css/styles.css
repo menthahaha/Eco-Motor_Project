@@ -1,0 +1,184 @@
+/* CSS переменные - Светлая тема */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #f59e0b;
+    --accent-color: #10b981;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f9fafb;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --border-color: #e5e7eb;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-hover: rgba(0, 0, 0, 0.15);
+}
+
+/* CSS переменные - Темная тема */
+[data-theme="dark"] {
+    --primary-color: #3b82f6;
+    --secondary-color: #f59e0b;
+    --accent-color: #10b981;
+    --text-dark: #f9fafb;
+    --text-light: #d1d5db;
+    --bg-light: #1f2937;
+    --bg-primary: #111827;
+    --bg-secondary: #1f2937;
+    --border-color: #374151;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --shadow-hover: rgba(0, 0, 0, 0.4);
+}
+
+/* Базовые стили */
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+/* Компоненты */
+.btn-primary {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: opacity 0.3s, all 0.3s;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: opacity 0.3s, all 0.3s;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    opacity: 0.9;
+}
+
+.card {
+    background-color: var(--bg-primary);
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color);
+    padding: 1.5rem;
+    transition: box-shadow 0.3s, background-color 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.card:hover {
+    box-shadow: 0 20px 25px -5px var(--shadow-hover), 0 10px 10px -5px var(--shadow-hover);
+}
+
+/* Стили для полей ввода */
+input, textarea, select {
+    background-color: var(--bg-primary);
+    color: var(--text-dark);
+    border-color: var(--border-color);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+select option {
+    background-color: var(--bg-primary);
+    color: var(--text-dark);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--text-light);
+    opacity: 0.7;
+}
+
+/* Стили для валидации */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+[data-theme="dark"] input:focus, [data-theme="dark"] textarea:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+input.border-red-500:focus, textarea.border-red-500:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+[data-theme="dark"] input.border-red-500:focus, [data-theme="dark"] textarea.border-red-500:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+input.border-green-500:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+[data-theme="dark"] input.border-green-500:focus {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+/* Переключатель темы */
+.theme-toggle {
+    position: relative;
+    width: 50px;
+    height: 26px;
+    background-color: var(--border-color);
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 2px solid var(--border-color);
+}
+
+.theme-toggle.active {
+    background-color: var(--primary-color);
+}
+
+.theme-toggle-slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle.active .theme-toggle-slider {
+    transform: translateX(24px);
+}
+
+/* Анимация для подсказок email */
+.email-suggestions {
+    animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

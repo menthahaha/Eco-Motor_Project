@@ -1,0 +1,34 @@
+{
+  "users": {
+    "admin@ya.ru": {
+      "name": "Администратор",
+      "email": "admin@ya.ru",
+      "phone": "+7 (999) 999-99-99",
+      "password": "12345Q!!",
+      "role": "admin",
+      "registeredAt": "2024-01-01T00:00:00.000Z"
+    },
+    "menthhhaeva@gmail.com": {
+      "name": "Полина",
+      "email": "menthhhaeva@gmail.com",
+      "phone": "+7 (921) 056-47-07",
+      "password": "",
+      "role": "user",
+      "registeredAt": "2025-11-30T00:00:00.000Z"
+    },
+    "max@gmail.com": {
+      "name": "Макс",
+      "email": "max@gmail.com",
+      "phone": "+7 (111) 111-11-11",
+      "password": "",
+      "role": "user",
+      "registeredAt": "2025-11-30T00:00:00.000Z"
+    }
+  },
+  "bookings": [],
+  "reviews": [],
+  "contacts": [],
+  "sessions": {}
+}
+
+
