@@ -166,7 +166,6 @@ input.border-green-500:focus {
     transform: translateX(24px);
 }
 
-/* Анимация для подсказок email */
 .email-suggestions {
     animation: fadeIn 0.2s ease-in;
 }
